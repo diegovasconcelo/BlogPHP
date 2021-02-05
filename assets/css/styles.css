@@ -17,6 +17,21 @@ body{
     background-color: whitesmoke;
 }
 
+/* Alertas */
+.alerta {
+    padding: 5px;
+    font-size: 14px;
+    color:white;
+    background:green;
+    box-shadow: 0px 1px 3px #ccc;
+    margin-bottom: 15px;
+    border-radius:  2px;
+}
+
+.alerta-error{
+    background: red;
+}
+
 /*Cabecera*/
 
 #cabecera{
@@ -134,7 +149,8 @@ input[type=password]{
 }
 
 input[type=button],
-input[type=submit]{
+input[type=submit],
+.boton{
     margin-top: 5px;
     margin-bottom: 5px;
 
@@ -146,6 +162,18 @@ input[type=submit]{
     border:1px solid rgb(67, 128, 240);
     cursor: pointer;
     text-align: center;
+}
+
+.boton{
+    width: 60px;
+}
+.boton-naranja{
+    background:orange;
+    width: 35px;
+}
+.boton-verde {
+    background:green;
+    width: 110px;
 }
 
 /*pricipal*/
@@ -194,6 +222,11 @@ input[type=submit]{
     width: 80px;
     margin: 0px auto;
     margin-top: 80px;
+    text-align: center;
+}
+
+#ver-todas a{
+    color:white;
     text-align: center;
 }
 

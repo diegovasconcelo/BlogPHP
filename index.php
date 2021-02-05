@@ -1,6 +1,6 @@
-<?php require_once('./includes/cabecera.php'); ?>       
+<?php require_once 'includes/cabecera.php'; ?>       
 <!--barra lateral-->
-<?php require_once('./includes/lateral.php'); ?>    
+<?php require_once 'includes/lateral.php'; ?>    
 <!--FIN barra lateral-->
 
 <!-- caja principal-->
@@ -42,4 +42,4 @@
 <!--FIN caja principal-->
 
 <!--pie de pagina-->
-<?php require_once('./includes/pie.php'); ?> 
+<?php require_once 'includes/pie.php'; ?> 
