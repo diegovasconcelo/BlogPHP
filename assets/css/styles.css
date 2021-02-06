@@ -168,11 +168,13 @@ input[type=submit],
     width: 60px;
 }
 .boton-naranja{
-    background:orange;
+    background:rgb(252, 184, 56);
+    border-color:orange ;
     width: 35px;
 }
 .boton-verde {
-    background:green;
+    background:rgb(14, 177, 14);
+    border-color: green;
     width: 110px;
 }
 
