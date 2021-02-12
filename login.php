@@ -13,9 +13,7 @@ if (isset($_POST)){
         session_start();
      }
 
-    //$email=issset($_POST['email']) ? mysqli_real_escape_string($db,$email) : false;
-    $email=$_POST['email'];
-    //password$password=isset($_POST['password']) ? mysqli_real_escape_string($db,$password) : false;
+    $email=trim($_POST['email']);
     $password=$_POST['password'];
     
     $sql="SELECT * FROM usuarios WHERE email='$email'";

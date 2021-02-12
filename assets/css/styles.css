@@ -32,6 +32,12 @@ body{
     background: red;
 }
 
+.fecha{
+    color:#4e4e4e;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
 /*Cabecera*/
 
 #cabecera{
@@ -165,13 +171,20 @@ input[type=submit],
 }
 
 .boton{
-    width: 60px;
+    width: 110px;
 }
+
 .boton-naranja{
     background:rgb(252, 184, 56);
     border-color:orange ;
-    width: 35px;
+    width: 110px;
 }
+.boton-rojo{
+    background:rgb(250, 85, 43);
+    border-color:rgb(253, 66, 19);
+    width: 110px;
+}
+
 .boton-verde {
     background:rgb(14, 177, 14);
     border-color: green;

@@ -6,33 +6,22 @@
 <!-- caja principal-->
 <div id="principal">
     <h1>Ultimas entradas</h1>
-    <a href=''>
-        <article class="entrada">
-            <h2>Titulo de mi entrada</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque fuga at necessitatibus, quae ducimus nemo a ipsam exercitationem in impedit quidem eligendi eaque sequi qui accusamus numquam optio? Cumque, repudiandae!</p>
-        </article>
-    </a>
+    <?php
+        $entradas=conseguirUltimasEntradas($db);
+        if(!empty($entradas)):
+            while ($entrada=mysqli_fetch_assoc($entradas)):
+    ?>
+                <a href='entrada.php?id=<?=$entrada['id']?>'>
+                    <article class="entrada">
+                        <h2><?=$entrada['titulo']?></h2>
+                        <span class='fecha'><?=$entrada['categoria'] .' | '.$entrada['fecha']?></span>
+                        <p><?=substr($entrada['descripcion'],0,200).'...'?></p>
+                    </article>
+                </a>
+    <?php   endwhile;
+        endif;
+    ?>
 
-    <a href=''>
-        <article class="entrada">
-            <h2>Titulo de mi entrada</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque fuga at necessitatibus, quae ducimus nemo a ipsam exercitationem in impedit quidem eligendi eaque sequi qui accusamus numquam optio? Cumque, repudiandae!</p>
-        </article>
-    </a>
-
-    <a href=''>
-        <article class="entrada">
-            <h2>Titulo de mi entrada</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque fuga at necessitatibus, quae ducimus nemo a ipsam exercitationem in impedit quidem eligendi eaque sequi qui accusamus numquam optio? Cumque, repudiandae!</p>
-        </article>
-    </a>
-
-    <a href=''>
-        <article class="entrada">
-            <h2>Titulo de mi entrada</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque fuga at necessitatibus, quae ducimus nemo a ipsam exercitationem in impedit quidem eligendi eaque sequi qui accusamus numquam optio? Cumque, repudiandae!</p>
-        </article>
-    </a>
 
     <div id='ver-todas'>
         <a href="">Ver todas</a>

@@ -21,9 +21,9 @@ mysqli_query($db,"SET NAME 'utf8'");
 
 
 //INICIAR LA SESION
-session_start();
-
-
+if(!isset($_SESSION)){
+    session_start();
+}
 
 
 
