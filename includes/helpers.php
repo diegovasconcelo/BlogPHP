@@ -10,25 +10,28 @@ function mostrarError($errores,$campo){
 }
 
 function borrarErrores(){
-    //$resultado=false;
+    $resultado=false;
 
     if (isset($_SESSION['errores'])){
         $_SESSION['errores']= null;
         unset($_SESSION['errores']);
+        $resultado=true;
     }
 
 
     if (isset($_SESSION['errores_entradas'])){
         $_SESSION['errores_entradas']= null;
         unset($_SESSION['errores_entradas']);
+        $resultado=true;
     }
 
     if (isset($_SESSION['completado'])){
         $_SESSION['completado']= null;
         unset($_SESSION['completado']);
+        $resultado=true;
     }
 
-    //return $resultado;
+    return $resultado;
 
 }
 
