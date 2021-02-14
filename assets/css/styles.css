@@ -171,24 +171,23 @@ input[type=submit],
 }
 
 .boton{
+    color:white !important;
+    text-align: center;
     width: 110px;
 }
 
 .boton-naranja{
     background:rgb(252, 184, 56);
     border-color:orange ;
-    width: 110px;
 }
 .boton-rojo{
     background:rgb(250, 85, 43);
     border-color:rgb(253, 66, 19);
-    width: 110px;
 }
 
 .boton-verde {
     background:rgb(14, 177, 14);
     border-color: green;
-    width: 110px;
 }
 
 /*pricipal*/
