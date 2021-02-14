@@ -1,3 +1,14 @@
+<?php require_once 'includes/conexion.php'; ?> 
+<?php require_once 'includes/helpers.php'; ?> 
+
+<?php 
+    $categoria_actual=conseguirCategoria($db,$_GET['id']);
+    if(!isset($categoria_actual['id'])){
+        header('Location:index.php');
+    }   
+
+?>
+
 <?php require_once 'includes/cabecera.php'; ?>       
 <!--barra lateral-->
 <?php require_once 'includes/lateral.php'; ?>    
@@ -5,10 +16,10 @@
 
 <!-- caja principal-->
 <div id="principal">
-    <h1>Ultimas entradas</h1>
+    <h1>Entradas de <?=$categoria_actual['nombre']?></h1>
     <?php
-        $entradas=conseguirEntradas($db, $limit=true);
-        if(!empty($entradas)):
+        $entradas=conseguirEntradas($db, $limit=null, $categoria=$categoria_actual['id']);
+        if(!empty($entradas) && mysqli_num_rows($entradas)>=1):
             while ($entrada=mysqli_fetch_assoc($entradas)):
     ?>
                 <a href='entrada.php?id=<?=$entrada['id']?>'>
@@ -19,13 +30,13 @@
                     </article>
                 </a>
     <?php   endwhile;
-        endif;
+        else:
+    ?>
+            <div class='alerta'>No hay entradas en esta categoria</div>
+    <?php
+         endif;
     ?>
 
-
-    <div id='ver-todas'>
-        <a href="entradas.php">Ver todas</a>
-    </div>
 
 </div>
 <!--FIN caja principal-->

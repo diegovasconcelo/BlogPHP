@@ -5,9 +5,9 @@
 
 <!-- caja principal-->
 <div id="principal">
-    <h1>Ultimas entradas</h1>
+    <h1>Todas las entradas</h1>
     <?php
-        $entradas=conseguirEntradas($db, $limit=true);
+        $entradas=conseguirEntradas($db);
         if(!empty($entradas)):
             while ($entrada=mysqli_fetch_assoc($entradas)):
     ?>
@@ -22,10 +22,6 @@
         endif;
     ?>
 
-
-    <div id='ver-todas'>
-        <a href="entradas.php">Ver todas</a>
-    </div>
 
 </div>
 <!--FIN caja principal-->
